@@ -8,17 +8,7 @@ import java.sql.SQLOutput;
 public class RomanToDecimal {
     public static int romanToDecimal(String roman)  {
         int sum = 0;
-        // convert to all one case
         roman = roman.toUpperCase();
-        // "XI".length() => 2
-        // "MCMLXII".length() => 7
-        // "HAHA ==> -1
-        // "xliv"
-        //  0123456
-        // len(roman)
-        // string.length()
-        // array.length
-        // list.size()
         for(int i = 0; i < roman.length(); i++) {
             if(roman.charAt(i) == 'I')
                 sum += 1;
