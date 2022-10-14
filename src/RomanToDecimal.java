@@ -1,11 +1,19 @@
 /**
- * @version 10.11.2022
+ * Convert valid Roman numerals to decimal values
+ * @version 10.13.2022
  * @author 23sukhija
  */
 
 import java.sql.SQLOutput;
 
 public class RomanToDecimal {
+
+    /**
+     * Assigning Roman numerals decimal values
+     * @param roman string
+     * @return int with decimal value of roman string or -1 if roman string invalid
+     */
+
     public static int romanToDecimal(String roman)  {
         int sum = 0;
         roman = roman.toUpperCase();
@@ -28,6 +36,9 @@ public class RomanToDecimal {
                 return -1;
             }
 
+        /**
+         * Assigning values to return for invariants
+         */
         // INVARIANTS
         if(roman.indexOf("IV") != -1)
             sum -= 2;
@@ -44,10 +55,13 @@ public class RomanToDecimal {
         return sum;
         }
 
-        public static void main(String[] args) {
+    /**
+     * Main method for class RomanToDecimal
+     * @param args
+     */
+    public static void main(String[] args) {
             for(String roman : args)    {
                 int decimal = romanToDecimal(roman);
-                //String romanTest = decimalToRoman(decimal);
                 if(decimal != -1)
                     System.out.println("Input: " + roman + " => output: " + decimal);
                 else
